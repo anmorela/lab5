@@ -12,6 +12,13 @@ function initializePage() {
 	console.log("Javascript connected!");
 }
 
+	$(".friendName").click(function(e){
+		e.preventDefault();
+		var currentName = $(this).text();
+		var newName = anagrammedName(currentName);
+		$(this).text(newName);
+	});
+
 function anagrammedName(name) {
 	// Thanks, Internet Anagram Server!
 	
@@ -44,3 +51,6 @@ function anagrammedName(name) {
 		return name;
 	}
 }
+
+
+
